@@ -1,0 +1,8 @@
+# dsh-s3 bundle patch: inserts the dual-face plugin row into the web profile
+# roster (applied as a profile bundle layer via the `dsh.bundle.patch`
+# manifest field). The node half (exports ".") runs in the host process
+# (/api/dsh-s3 routes, optional s3_* agent tools); the `dsh.client`
+# declaration makes the browser half (exports "./client") load in the GUI.
+- insert:
+    - id: s3
+      name: dsh-s3
