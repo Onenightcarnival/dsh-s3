@@ -6,9 +6,11 @@ Works with AWS S3, MinIO, Alibaba OSS, Tencent COS, Cloudflare R2, Backblaze B2 
 
 ```sh
 dsh plugin --profile web add dsh-s3
-# or, from a packed tarball:
-dsh plugin --profile web add file:./dsh-s3-0.1.0.tgz
+# or, from a packed tarball downloaded from the Releases page:
+dsh plugin --profile web add file:./dsh-s3-<version>.tgz
 ```
+
+Prebuilt tarballs are attached to every [GitHub Release](https://github.com/Onenightcarnival/dsh-s3/releases); each `vX.Y.Z` tag is built and published automatically by CI.
 
 Credentials live in `~/.dsh/dsh-s3.json` (mode 0600) and never reach the browser or the agent. Routes are loopback-only and require the GUI's browser-session cookie. See [README.zh.md](README.zh.md) for the full guide (Chinese).
 
